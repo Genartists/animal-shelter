@@ -1,0 +1,3 @@
+db.url=jdbc:mysql://127.0.0.1:3306/animalshelterdb
+db.username=__YOUR_DB_USER__
+db.password=__YOUR_DB_PASS__
