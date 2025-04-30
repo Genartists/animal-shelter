@@ -34,7 +34,7 @@ This application helps animal shelters manage their pet inventory, including ado
 ### Clone the Repository
 
 ```
-git clone 
+git clone https://github.com/Genartists/animal-shelter.git
 cd animal-shelter
 ```
 ### 1. Run with Docker Compose
