@@ -31,6 +31,8 @@ This application helps animal shelters manage their pet inventory, including ado
 - Java 21+
 - Maven
 - Docker & Docker Compose
+**Note:** Make sure Docker Desktop is installed and running before executing Docker commands.
+
 ### Clone the Repository
 
 ```
