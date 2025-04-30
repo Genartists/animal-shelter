@@ -76,9 +76,9 @@ To connect to the MySQL server in Docker, you must create a `db.properties` file
     
 
 ```
-db.url=jdbc:mysql://db:3306/animalshelterdb
-db.username=your_username
-db.password=your_password
+DB.URL=jdbc:mysql://db:3306/animalshelterdb
+DB.USERNAME=your_username
+DB.PASSWORD=your_password
 ```
 
 Once configured, you can build and run the application with Docker Compose.
