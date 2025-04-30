@@ -1,80 +1,85 @@
-# Animal Sheltering 
+# Animal Sheltering
 
-A CLI-based inventory management system for animal shelter. 
+A CLI-based inventory management system for animal shelters.
 
-## About 
+## About
 
-This application helps animal shelters manage their pet inventory, including adoption tracking and vaccine records with various functionalities.
+This application helps animal shelters manage their pet inventory, including adoption tracking, vaccine records, and other related functionalities.
 
 ## Features
 
-- CRUD operations to on animal records in database 
-- Search and filter by species or name
-- Dockerized backend
-- Configurable database environment
+- Full CRUD operations on animal records in the database
+    
+- Search and filter animals by species or name
+    
+- Dockerized backend with Docker Compose support
+    
+- Configurable database environment via properties files
 
 ## Tech Stack
 
-- **Backend:** Java, JDBC, MySQL  
-- **Build Tool:** Maven  
-- **Containerization:** Docker, Docker Compose  
-- **Database:** MySQL 
-- **Others:** Properties file for environment config, File I/O
+- **Backend:** Java, JDBC
+- **Database:** MySQL
+- **Build Tool:** Maven
+- **Containerization:** Docker, Docker Compose
+- **Other:** File I/O, `.properties` configuration files
 
-## ## Installation & Usage
+## Installation & Usage
 
 ### Prerequisites
 
 - Java 21+
 - Maven
-- Docker & Docker Compose 
-
+- Docker & Docker Compose
 ### Clone the Repository
 
-```bash
-git clone https://github.com/Genartists/animal-shelter.git
-cd animal-shelter (move to the project folder)
 ```
+git clone 
+cd animal-shelter
+```
+### 1. Run with Docker Compose
 
-#### 1. Installations with Docker compose
+Build and start the MySQL server in the background:
 
-- Build the server in background first using command: 
-```bash
+```
 docker compose up -d --build
 ```
 
-- Build run the application by using command:
-```bash
+Run the application:
+
+```
 docker compose run --rm app
 ```
 
-#### 2. Usage
+### 2. Usage Instructions
 
-After running the application:
+After launching the app:
 
-1. Select an action from the console menu (e.g., create, update, delete animal).
-    
-2. Input required details when prompted.
-    
-3. Use the features to manage animals information.
+1. Choose an action from the menu (e.g., create, update, delete animal).
+2. Enter the required data when prompted.
+3. Use search and filter features to manage animal records.
 
 ## Configuration
 
-The application uses environment variables or `.properties` files to manage DB credentials.
+The application uses `.properties` files to configure database access.
 
-*Note:*  In order to connect with Mysql server in docker, you need to have a *db.properties* file.
-In the project folder, locate resources folder (Path: src/main/resources) where you can find a file name *db.properties.example*. Now rename the file by remove the .example part. After finish we can start to build and run the whole application with Docker compose.
+**Important:**  
+To connect to the MySQL server in Docker, you must create a `db.properties` file.
 
-- `db.properties`
+1. Go to: `src/main/resources/`
+    
+2. Rename `db.properties.example` to `db.properties`
+    
+3. Update the file with your credentials:
+    
 
-Example `db.properties`:
-```properties
+```
 db.url=jdbc:mysql://db:3306/animalshelterdb
-db.username=__YOUR_DB_USER__ 
-db.password=__YOUR_DB_USER__
+db.username=your_username
+db.password=your_password
 ```
 
+Once configured, you can build and run the application with Docker Compose.
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
-
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
