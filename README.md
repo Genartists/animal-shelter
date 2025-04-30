@@ -45,7 +45,7 @@ docker compose up -d --build
 
 - Build run the application by using command:
 ```bash
-	docker compose run --rm app
+docker compose run --rm app
 ```
 
 #### 2. Usage
